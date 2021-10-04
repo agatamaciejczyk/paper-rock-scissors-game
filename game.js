@@ -45,15 +45,15 @@ function publishResult(player, ai, result) {
    
     if (result === "win") {
      document.querySelector('p.wins span').textContent = ++gameSummary.wins;
-     document.querySelector('[data-summary="who-win"]').textContent = "Ty wygrałeś!!!!"
+     document.querySelector('[data-summary="who-win"]').textContent = "You won!!!!"
      document.querySelector('[data-summary="who-win"]').style.color = "green";
     } else if (result === "loss") {
      document.querySelector('p.losses span').textContent = ++gameSummary.losses;
-     document.querySelector('[data-summary="who-win"]').textContent = "Komputer wygrał :("
+     document.querySelector('[data-summary="who-win"]').textContent = "The computer won :("
      document.querySelector('[data-summary="who-win"]').style.color = "red";
     } else {
      document.querySelector('p.draws span').textContent = ++gameSummary.draws;
-     document.querySelector('[data-summary="who-win"]').textContent = "Remis :\\"
+     document.querySelector('[data-summary="who-win"]').textContent = "It's a draw :\\"
      document.querySelector('[data-summary="who-win"]').style.color = "gray";
     }
    }
@@ -70,7 +70,7 @@ function endGame() {
 
 function startGame() {
     if (!game.playerHand){
-        return alert("wybierz dłoń!")
+        return alert("Select a hand!")
     }
 
     game.aiHand = aiChoice()
